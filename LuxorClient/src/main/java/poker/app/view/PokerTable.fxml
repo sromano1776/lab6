@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="OuterBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="1350.0" style="-fx-background-color: green;" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.PokerTableController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="109.0" prefWidth="850.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="109.0" prefWidth="455.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="129.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="325.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="56.0" prefWidth="328.0">
+                           <children>
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" onAction="#btnFold_Click" prefWidth="80.0" text="Fold" />
+                              <Button mnemonicParsing="false" onAction="#btnCheck_Click" prefWidth="80.0" text="Check" />
+                              <Button mnemonicParsing="false" prefWidth="80.0" text="Bet" />
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" prefWidth="80.0" text="Raise" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox id="txtPlayer1Name" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label id="txtPos1Name" fx:id="lblPos1Name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton id="btnPos1SitLeave" fx:id="btnPos1SitLeave" mnemonicParsing="false" onAction="#btnSitLeave_Click" styleClass="togglebutton" stylesheets="@DarkTheme.css" text="Sit" />
+                              <ImageView id="imgViewDealerButtonPos1" fx:id="imgViewDealerButtonPos1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/img/d-button.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="109.0" prefWidth="455.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="129.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="325.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label id="txtPos3Name" fx:id="lblPos3Name" />
+                     </children>
+                  </HBox>
+                  <FlowPane prefHeight="50.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button id="btnPlayer1Fold" mnemonicParsing="false" onAction="#btnFold_Click" prefWidth="80.0" text="Fold" />
+                        <Button mnemonicParsing="false" onAction="#btnCheck_Click" prefWidth="80.0" text="Check" />
+                        <Button mnemonicParsing="false" prefWidth="80.0" text="Bet" />
+                        <Button id="btnPlayer1Fold" mnemonicParsing="false" prefWidth="80.0" text="Raise" />
+                     </children>
+                  </FlowPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <ToggleButton id="btnPos3SitLeave" fx:id="btnPos3SitLeave" mnemonicParsing="false" onAction="#btnSitLeave_Click" styleClass="togglebutton" stylesheets="@DarkTheme.css" text="Sit" />
+                        <ImageView id="imgViewDealerButtonPos3" fx:id="imgViewDealerButtonPos3" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../resources/img/d-button.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="406.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="123.0" layoutY="138.0" prefHeight="130.0" prefWidth="274.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="274.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button id="btnStartGame" fx:id="btnStartGame" mnemonicParsing="false" onAction="#btnStart_Click" prefWidth="80.0" text="Start" />
+                        <Button id="btnDeal" mnemonicParsing="false" onAction="#btnDeal_Click" prefWidth="80.0" text="Deal" />
+                        <Button id="btnGetState" mnemonicParsing="false" onAction="#GetGameState" prefWidth="77.0" text="Draw" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Button id="btnGetState" layoutX="191.0" layoutY="287.0" mnemonicParsing="false" onAction="#GetGameState" text="Get State" />
+            <Label id="lblNumberOfPlayers" fx:id="lblNumberOfPlayers" layoutX="28.0" layoutY="27.0" prefHeight="21.0" prefWidth="127.0" />
+            <TextArea fx:id="txtPlayerArea" layoutX="14.0" layoutY="48.0" prefHeight="89.0" prefWidth="421.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="450.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <GridPane id="GridLeft" alignment="CENTER" prefHeight="300.0" prefWidth="692.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="129.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="325.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="150.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="112.0" prefWidth="333.0">
+                           <children>
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" onAction="#btnFold_Click" prefWidth="80.0" text="Fold" />
+                              <Button mnemonicParsing="false" onAction="#btnCheck_Click" prefWidth="80.0" text="Check" />
+                              <Button mnemonicParsing="false" prefWidth="80.0" text="Bet" />
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" prefWidth="80.0" text="Raise" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox id="txtPlayer1Name" prefHeight="0.0" prefWidth="114.0">
+                     <children>
+                        <Label id="txtPos2Name" fx:id="lblPos2Name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton id="btnPos2SitLeave" fx:id="btnPos2SitLeave" mnemonicParsing="false" onAction="#btnSitLeave_Click" styleClass="togglebutton" stylesheets="@DarkTheme.css" text="Sit" />
+                              <ImageView id="imgViewDealerButtonPos2" fx:id="imgViewDealerButtonPos2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/img/d-button.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox prefHeight="100.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane id="GridLeft" alignment="CENTER" prefHeight="300.0" prefWidth="692.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="129.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="325.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="150.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="112.0" prefWidth="333.0">
+                           <children>
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" onAction="#btnFold_Click" prefWidth="80.0" text="Fold" />
+                              <Button mnemonicParsing="false" onAction="#btnCheck_Click" prefWidth="80.0" text="Check" />
+                              <Button mnemonicParsing="false" prefWidth="80.0" text="Bet" />
+                              <Button id="btnPlayer1Fold" mnemonicParsing="false" prefWidth="80.0" text="Raise" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox id="txtPlayer1Name" prefHeight="0.0" prefWidth="114.0">
+                     <children>
+                        <Label id="txtPos4Name" fx:id="lblPos4Name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton id="btnPos4SitLeave" fx:id="btnPos4SitLeave" mnemonicParsing="false" onAction="#btnSitLeave_Click" styleClass="togglebutton" stylesheets="@DarkTheme.css" text="Sit" />
+                              <ImageView id="imgViewDealerButtonPos4" fx:id="imgViewDealerButtonPos4" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/img/d-button.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children></HBox>
+   </right>
+</BorderPane>
